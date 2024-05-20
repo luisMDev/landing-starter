@@ -1,0 +1,42 @@
+// /* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import '@tabler/icons-webfont/dist/tabler-icons.min.css';
+@import '@luismdev/ngx-error-handler/src/lib/styles/ngx-error-handler.scss';
+
+$utilities: map-merge(
+  $utilities,
+  (
+    'font-size':
+      map-merge(
+        map-get($utilities, 'font-size'),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, 'font-size'), 'values'),
+              (
+                7: $font-size-base * 0.8,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+$font-size-base: 14px;
+$input-btn-font-size: $font-size-base;
+$btn-font-size: $font-size-base;
+$btn-font-weight: 500;
+
+$border-radius: 0.5rem;
+$button-border-radius: 0.5rem;
+$card-border-radius: 1rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 1rem;
+$border-radius-xxl: 2rem;
+$border-radius-pill: 50rem;
+
+$card-spacer-y: 2rem;
+$card-spacer-x: 2rem;
+
+@import 'bootstrap/scss/bootstrap';

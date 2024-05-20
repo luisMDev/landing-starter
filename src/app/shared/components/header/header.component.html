@@ -1,0 +1,26 @@
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-between p-3 border-bottom">
+    <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+      <b class="fs-4">Landing starter</b>
+    </a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="/pricing" class="nav-link link-body-emphasis text-muted fw-semibold"> {{ 'HEADER.PRICING' | translate }} </a>
+      </li>
+
+      <li class="nav-item">
+        <a [href]="urls.docs" class="nav-link link-body-emphasis text-muted fw-semibold"> {{ 'HEADER.DOCUMENTATION' | translate }} </a>
+      </li>
+
+      <li class="nav-item ms-2">
+        <!-- <div class="btn btn-outline-primary">
+          <i class="ti ti-brand-github"></i>
+          Star on Github
+        </div> -->
+      </li>
+      <li class="nav-item ms-2">
+        <div class="btn btn-primary">Go to console</div>
+      </li>
+    </ul>
+  </header>
+</div>
