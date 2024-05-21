@@ -1,0 +1,30 @@
+name: Lint # name of the action (displayed in the github interface)
+
+on: [pull_request]
+env: # environment variables (available in any part of the action)
+  NODE_VERSION: 20
+
+jobs:
+  lint-commit-messages:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Commit message Linting
+      - run: npm install -g @commitlint/{cli,config-conventional}
+      - run: commitlint --from ${{ github.event.pull_request.base.sha }}
+          --to ${{ github.event.pull_request.head.sha }}
+          --verbose
+
+      - name: Code Linting
+        run: ng lint

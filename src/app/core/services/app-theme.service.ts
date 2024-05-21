@@ -10,7 +10,7 @@ export class AppThemeService {
 
   private isLocalStorageAvailable: boolean = typeof localStorage !== 'undefined';
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: unknown) {
     if (isPlatformBrowser(this.platformId)) {
       const initialTheme = this.getInitialTheme();
       this.setTheme(initialTheme);
