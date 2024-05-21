@@ -26,7 +26,7 @@ jobs:
         run: npm ci && npm install commitlint@latest
 
       - name: Code Linting
-        run: ng lint
+        run: npm run lint
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
