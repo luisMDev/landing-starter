@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { environment } from './../../../../../environments/environment';
@@ -9,7 +8,7 @@ import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.compone
   standalone: true,
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
-  imports: [CommonModule, TranslateModule, ThemeSwitcherComponent],
+  imports: [TranslateModule, ThemeSwitcherComponent],
 })
 export class FooterComponent {
   public version: string = environment.version;

@@ -26,27 +26,31 @@
   <div class="container">
     <h5 class="mb-5">Trusted by engineers at</h5>
     <div class="row row-cols-1 row-cols-lg-4 flex-wrap justify-content-center">
-      <div class="col p-4" *ngFor="let brand of brands">
-        <img [src]="brand" alt="" />
-      </div>
+      @for (brand of brands; track brand) {
+        <div class="col p-4">
+          <img [src]="brand" alt="" />
+        </div>
+      }
     </div>
   </div>
 </section>
 
 <section class="container">
-  <div class="row align-items-center g-5 py-5 my-5" *ngFor="let demo of demos;let i =index" [class.flex-lg-row-reverse]="i%2 === 0">
-    <div class="col-10 col-sm-8 col-lg-6 px-5">
-      <img [src]="demo.img" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
+  @for (demo of demos; track demo; let i = $index) {
+    <div class="row align-items-center g-5 py-5 my-5" [class.flex-lg-row-reverse]="i % 2 === 0">
+      <div class="col-10 col-sm-8 col-lg-6 px-5">
+        <img [src]="demo.img" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
+      </div>
+      <div class="col-lg-6 px-5">
+        <h2 class="display-7 fw-bold text-body-emphasis mb-4" [innerHTML]="demo.title"></h2>
+        <p class="fs-5" [innerHTML]="demo.description"></p>
+        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+          <a [href]="urls.console" class="btn btn-primary px-4 me-md-2">Get started</a>
+          <a [href]="urls.docs" class="btn btn-outline-secondary px-4">Documentation</a>
+        </div> -->
+      </div>
     </div>
-    <div class="col-lg-6 px-5">
-      <h2 class="display-7 fw-bold text-body-emphasis mb-4" [innerHTML]="demo.title"></h2>
-      <p class="fs-5" [innerHTML]="demo.description"></p>
-      <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
-        <a [href]="urls.console" class="btn btn-primary px-4 me-md-2">Get started</a>
-        <a [href]="urls.docs" class="btn btn-outline-secondary px-4">Documentation</a>
-      </div> -->
-    </div>
-  </div>
+  }
 </section>
 
 <section class="container px-4 py-5" id="icon-grid">
@@ -56,22 +60,24 @@
   </div>
 
   <div class="row g-5 py-5 row-cols-1 row-cols-lg-4 flex-wrap justify-content-center">
-    <div class="feature col mb-5" *ngFor="let feature of features">
-      <div class="card p-4 h-100">
-        <div
-          class="icon-square text-body-emphasis bg-body-secondary d-inline-flex rounded-4 align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-        >
-          <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg> -->
-          <img class="bi" width="50px" height="50px" [src]="feature.img" alt="" />
-        </div>
-        <h5 class="fs-5 text-body-emphasis" [innerHTML]="feature.title"></h5>
-        <p [innerHTML]="feature.description"></p>
-        <!-- <a href="#" class="icon-link">
+    @for (feature of features; track feature) {
+      <div class="feature col mb-5">
+        <div class="card p-4 h-100">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex rounded-4 align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+          >
+            <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg> -->
+            <img class="bi" width="50px" height="50px" [src]="feature.img" alt="" />
+          </div>
+          <h5 class="fs-5 text-body-emphasis" [innerHTML]="feature.title"></h5>
+          <p [innerHTML]="feature.description"></p>
+          <!-- <a href="#" class="icon-link">
           Call to action
           <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
         </a> -->
+        </div>
       </div>
-    </div>
+    }
   </div>
 </section>
 
@@ -87,13 +93,15 @@
 
     <div class="col ps-5 my-5">
       <div class="row row-cols-1 row-cols-sm-4 g-4 ps-5">
-        <div class="col d-flex flex-column gap-2" *ngFor="let codePlatform of codePlatforms">
-          <!-- <div
+        @for (codePlatform of codePlatforms; track codePlatform) {
+          <div class="col d-flex flex-column gap-2">
+            <!-- <div
             class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
-          >
-        </div> -->
-          <img [src]="codePlatform.img" [alt]="codePlatform.link" width="32px" height="32px" />
-        </div>
+            >
+          </div> -->
+            <img [src]="codePlatform.img" [alt]="codePlatform.link" width="32px" height="32px" />
+          </div>
+        }
       </div>
     </div>
   </div>

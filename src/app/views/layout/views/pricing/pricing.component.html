@@ -8,46 +8,53 @@
   </section>
 
   <section class="row row-cols-1 row-cols-md-3 mb-5">
-    <div class="col" *ngFor="let plan of plans">
-      <div class="card mb-4 rounded-3 shadow-sm h-100">
-        <div class="card-header py-3">
-          <h4 class="my-0 fw-normal">{{plan.name}}</h4>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title pricing-card-title d-flex flex-column">
-            {{plan.price}}<small class="text-body-secondary fw-light fs-6"> {{plan.sub}} </small>
-          </h1>
-
-          <ul class="list-unstyled my-4">
-            <li *ngFor="let feature of plan.features"><i class="me-2 ti ti-circle-dashed-check"></i>{{feature}}</li>
-          </ul>
-          <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
-          <p class="mt-3 mb-0 fs-7 lh-sm">{{plan.description}}</p>
+    @for (plan of plans; track plan) {
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm h-100">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">{{ plan.name }}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title d-flex flex-column">
+              {{ plan.price }}<small class="text-body-secondary fw-light fs-6"> {{ plan.sub }} </small>
+            </h1>
+            <ul class="list-unstyled my-4">
+              @for (feature of plan.features; track feature) {
+                <li><i class="me-2 ti ti-circle-dashed-check"></i>{{ feature }}</li>
+              }
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+            <p class="mt-3 mb-0 fs-7 lh-sm">{{ plan.description }}</p>
+          </div>
         </div>
       </div>
-    </div>
+    }
   </section>
 
   <h2 class="display-6 text-center mt-3 mb-5">Compare plans</h2>
 
   <section class="table-responsive">
-    <table class="table text-center mb-5" *ngFor="let plan of comparePlans">
-      <thead>
-        <tr>
-          <th style="width: 34%" class="text-start">{{plan.section}}</th>
-          <th style="width: 22%">Free</th>
-          <th style="width: 22%">Pro</th>
-          <th style="width: 22%">Enterprise</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let list of plan.list">
-          <th scope="row" class="text-start">{{list.label}}</th>
-          <td [innerHTML]="list.starter"></td>
-          <td [innerHTML]="list.pro"></td>
-          <td [innerHTML]="list.enterprise"></td>
-        </tr>
-      </tbody>
-    </table>
+    @for (plan of comparePlans; track plan) {
+      <table class="table text-center mb-5">
+        <thead>
+          <tr>
+            <th style="width: 34%" class="text-start">{{ plan.section }}</th>
+            <th style="width: 22%">Free</th>
+            <th style="width: 22%">Pro</th>
+            <th style="width: 22%">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (list of plan.list; track list) {
+            <tr>
+              <th scope="row" class="text-start">{{ list.label }}</th>
+              <td [innerHTML]="list.starter"></td>
+              <td [innerHTML]="list.pro"></td>
+              <td [innerHTML]="list.enterprise"></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
   </section>
 </main>

@@ -1,14 +1,11 @@
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID, WritableSignal, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AppThemeService {
-  public theme$: BehaviorSubject<string> = new BehaviorSubject<string>('light');
-
-  private isLocalStorageAvailable: boolean = typeof localStorage !== 'undefined';
+  public theme$: WritableSignal<string> = signal<string>('light');
 
   constructor(@Inject(PLATFORM_ID) private platformId: unknown) {
     if (isPlatformBrowser(this.platformId)) {
@@ -18,12 +15,12 @@ export class AppThemeService {
   }
 
   public toggleTheme(): void {
-    const newTheme = this.theme$.value === 'light' ? 'dark' : 'light';
+    const newTheme = this.theme$() === 'light' ? 'dark' : 'light';
     this.setTheme(newTheme);
   }
 
   public setTheme(theme: string): void {
-    this.theme$.next(theme);
+    this.theme$.set(theme);
     const body = document.body as HTMLElement;
     body.setAttribute('data-bs-theme', theme);
 
