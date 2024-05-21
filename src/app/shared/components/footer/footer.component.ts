@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { environment } from './../../../../../environments/environment';
-import { ThemeSwitcherComponent } from '../theme-switcher/theme-switcher.component';
+import { ThemeSwitcherComponent } from '@luismdev/ngx-utils/theme-switcher';
 
 @Component({
   selector: 'landing-starter-footer',
