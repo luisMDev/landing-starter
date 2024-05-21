@@ -1,30 +1,38 @@
-name: Lint # name of the action (displayed in the github interface)
-on: [pull_request]
-env: # environment variables (available in any part of the action)
-  NODE_VERSION: 20
+# This is a basic workflow to help you get started with Actions
+name: front-linter
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+# Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 jobs:
-  linting:
-    name: Linting # job name (unique id)
-    runs-on: ubuntu-latest
-
+  # This workflow contains a single job called "lint"
+  lint:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest  linting:
     steps:
-       - name: Install NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
+      name: Linting # job name (unique id)
+      runs-on: ubuntu-latest
 
-      - name: Code Checkout
-        uses: actions/checkout@v3
+      steps:
+        - name: Code Checkout
+          uses: actions/checkout@v3
+        - name: Install NodeJS
+          uses: actions/setup-node@v3
+          with:
+            node-version: '20'
+        - name: Install Dependencies
+          run: npm ci
+        - name: Commit message Linting
+        - run: npm install -g @commitlint/{cli,config-conventional}
+        - run: commitlint --from ${{ github.event.pull_request.base.sha }}
+                          --to ${{ github.event.pull_request.head.sha }}
+                          --verbose
 
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Commit message Linting
-      - run: npm install -g @commitlint/{cli,config-conventional}
-      - run: commitlint --from ${{ github.event.pull_request.base.sha }}
-                        --to ${{ github.event.pull_request.head.sha }}
-                        --verbose
-
-      - name: Code Linting
-        run: ng lint
+        - name: Code Linting
+          run: ng lint
 
