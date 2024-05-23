@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 import { environment } from '../../../../../environments/environment';
 
@@ -9,7 +8,7 @@ import { environment } from '../../../../../environments/environment';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   standalone: true,
-  imports: [RouterModule, TranslateModule, NgbDropdownModule],
+  imports: [RouterModule, TranslateModule],
 })
 export class HeaderComponent {
   public urls = environment.urls;
