@@ -1,107 +1,314 @@
 <section class="px-4 pt-5 my-5 text-center">
-  <h1 class="display-4 fw-bold text-body-emphasis">Centered screenshot</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">
+  <h1 class="display-1 lh-1 fw-bolder text-body-emphasis d-flex flex-column mt-5">
+    <span>Centered screenshot</span>
+    <!-- <span>screenshot</span> -->
+  </h1>
+  <div class="col-lg-6 mx-auto mb-5 mt-3 pb-5">
+    <p class="fs-5 text-center text-body-secondary">
       Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit,
-      featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+      featuring Sass variables and mixins
     </p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
       <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
       <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
     </div>
   </div>
-  <div class="container px-5">
-    <img
-      src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-docs.png"
-      class="img-fluid border rounded-3 shadow-lg mb-4"
-      alt="Example image"
-      width="900"
-      height="500"
-      loading="lazy"
-    />
+  <div class="container my-5 d-flex justify-content-center">
+    <div class="main-bg img-fluid rounded-4 mt-4"></div>
   </div>
 </section>
 
-<section class="px-4 py-5 text-center">
-  <div class="container">
-    <h5 class="mb-5">Trusted by engineers at</h5>
-    <div class="row row-cols-1 row-cols-lg-4 flex-wrap justify-content-center">
+<section class="my-5 p-5 text-center">
+  <div class="container px-5 pt-5">
+    <h5 class="mb-4 text-body-secondary">Trusted by engineers at</h5>
+    <div class="row row-cols-1 row-cols-lg-5 flex-wrap justify-content-center px-5">
       @for (brand of brands; track brand) {
-        <div class="col p-4">
-          <img [src]="brand" alt="" />
+        <div class="col p-5 py-3">
+          <img class="brand img-fluid" [src]="brand" alt="" />
         </div>
       }
     </div>
   </div>
 </section>
 
-<section class="container">
-  @for (demo of demos; track demo; let i = $index) {
-    <div class="row align-items-center g-5 py-5 my-5" [class.flex-lg-row-reverse]="i % 2 === 0">
-      <div class="col-10 col-sm-8 col-lg-6 px-5">
-        <img [src]="demo.img" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
-      </div>
-      <div class="col-lg-6 px-5">
-        <h2 class="display-7 fw-bold text-body-emphasis mb-4" [innerHTML]="demo.title"></h2>
-        <p class="fs-5" [innerHTML]="demo.description"></p>
-        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
-          <a [href]="urls.console" class="btn btn-primary px-4 me-md-2">Get started</a>
-          <a [href]="urls.docs" class="btn btn-outline-secondary px-4">Documentation</a>
-        </div> -->
-      </div>
-    </div>
-  }
-</section>
-
-<section class="container px-4 py-5" id="icon-grid">
-  <div class="text-center mb-5">
-    <h2 class="display-6 text-center mt-3">Features</h2>
-    <a [href]="urls.console"> Read full documentation </a>
-  </div>
-
-  <div class="row g-5 py-5 row-cols-1 row-cols-lg-4 flex-wrap justify-content-center">
-    @for (feature of features; track feature) {
-      <div class="feature col mb-5">
-        <div class="card p-4 h-100">
-          <div
-            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex rounded-4 align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-          >
-            <!-- <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg> -->
-            <img class="bi" width="50px" height="50px" [src]="feature.img" alt="" />
+<section class="container my-5 pt-5">
+  <div class="row pt-5 position-relative">
+    <div class="feature-1"></div>
+    @for (demo of demos; track demo; let i = $index) {
+      <div class="mb-4" [class]="i === 0 || i === 5 ? 'col-6' : 'col-3'">
+        <div class="card overflow-hidden mb-5 h-100">
+          <!-- <div class="feature-1"></div> -->
+          <div class="card-body pb-0">
+            <h3 class="fs-5 lh-1 fw-bold text-body-emphasis mb-2" [innerHTML]="demo.title"></h3>
+            <p class="fs-6 lh-sm text-body-secondary m-0" [innerHTML]="demo.description"></p>
           </div>
-          <h5 class="fs-5 text-body-emphasis" [innerHTML]="feature.title"></h5>
-          <p [innerHTML]="feature.description"></p>
-          <!-- <a href="#" class="icon-link">
-          Call to action
-          <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-        </a> -->
+          <img [src]="demo.img" class="img-fluid object-fit-cover" alt="Bootstrap Themes" style="height: 200px" loading="lazy" />
         </div>
       </div>
     }
   </div>
 </section>
 
-<section class="container mb-5">
-  <div class="position-relative p-5 text-muted bg-body border border-dashed rounded-5 row row-cols-1 row-cols-md-2 g-5 py-5">
-    <div class="col d-flex flex-column align-items-start gap-2 my-5">
-      <h2 class="fw-bold text-body-emphasis">Code the way you want</h2>
-      <p class="text-body-secondary">
-        We support many SDKs making Appwrite flexible to your needs and ensuring you can code with the language you want at any time.
-      </p>
-      <a [href]="urls.console" class="btn btn-primary btn-lg">View all SDKs</a>
+<section class="py-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-3 text-center mt-3">Features</h2>
+      <p class="fs-3 text-center text-body-secondary">The platform tailored for the serverless revolution</p>
     </div>
+    <div class="row">
+      <div class="col-5 offset-1">
+        <ul class="feature-group">
+          @for (feature of features; track feature; let i = $index) {
+            <li
+              class="list-group-item d-flex justify-content-between align-items-start feature py-2 px-3"
+              [class.active]="activeFeature === i"
+              (click)="activeFeature = i"
+            >
+              <div class="ms-2 me-auto">
+                <h5 class="fw-bold" [innerHTML]="feature.title"></h5>
+                @if (activeFeature === i) {
+                  <span class="fs-6" [innerHTML]="feature.description"></span>
+                }
+              </div>
+              @if (feature.soon) {
+                <span class="badge text-bg-primary rounded-pill">soon</span>
+              }
+            </li>
+          }
+        </ul>
+      </div>
+      <div class="col-5 offset-1 d-flex justify-content-center align-items-center position-relative">
+        <!-- <img height="200" alt="" class="w-100 object-fit-contain z-1" [src]="features[activeFeature].img" /> -->
+        <div class="feature-bg"></div>
+        <div class="feature-img" [style.backgroundImage]="'url(' + features[activeFeature].img + ')'"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="col ps-5 my-5">
-      <div class="row row-cols-1 row-cols-sm-4 g-4 ps-5">
-        @for (codePlatform of codePlatforms; track codePlatform) {
-          <div class="col d-flex flex-column gap-2">
-            <!-- <div
+<section class="bg-body-tertiary py-2 my-5 border-bottom border-top">
+  <div class="container">
+    <div class="row my-5">
+      <div class="col-4">
+        <h3 class="fs-4 lh-1 fw-bold text-body-emphasis mb-3">Automate your journey to Zero Trust</h3>
+        <p class="fs-6 text-body-secondary">
+          Bring security up to DevOps speed with an API-first design that easily integrates with your stack, no changes to infrastructure
+          needed. Just choose your IaC, choose your VPC, and deploy.
+        </p>
+        <div class="d-flex mt-2 gap-2">
+          <button class="btn btn-secondary d-flex align-items-center gap-2">
+            Get started
+            <div class="ti ti-arrow-narrow-right"></div>
+          </button>
+        </div>
+      </div>
+      <div class="col-7 offset-1">
+        <div class="row row-cols-4">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="ti ti-brand-disney fs-2 mb-5"></div>
+                <small class="text-body-secondary">Zero Trust</small>
+                <h6 class="fs-5 fw-bold m-0">Zero Trust</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="ti ti-brand-disney fs-2 mb-5"></div>
+                <small class="text-body-secondary">Zero Trust</small>
+                <h6 class="fs-5 fw-bold m-0">Zero Trust</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="ti ti-brand-disney fs-2 mb-5"></div>
+                <small class="text-body-secondary">Zero Trust</small>
+                <h6 class="fs-5 fw-bold m-0">Zero Trust</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="ti ti-brand-disney fs-2 mb-5"></div>
+                <small class="text-body-secondary">Zero Trust</small>
+                <h6 class="fs-5 fw-bold m-0">Zero Trust</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overflow-hidden mt-5 pt-5">
+  <div class="container my-5 py-5">
+    <div class="row my-5 py-5">
+      <div class="col-5">
+        <h2 class="display-5 lh-1 fw-bold text-body-emphasis mb-5">The Code!</h2>
+        <p class="fs-5 text-body-secondary">
+          Bring security up to DevOps speed with an API-first design that easily integrates with your stack, no changes to infrastructure
+          needed. Just choose your IaC, choose your VPC, and deploy.
+        </p>
+        <figure class="mt-5">
+          <blockquote class="blockquote">
+            <p class="fs-6">
+              "Twingate is a powerful platform that allows us to programmatically deploy and maintain a zero trust approach to our
+              infrastructure."
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer mt-2">
+            Paul Guthrie — <cite title="Source Title">Information Security Officer, Blend</cite>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col-6 offset-1 card-console d-flex justify-content-center position-relative">
+        <div class="console-bg"></div>
+        <div class="card w-100">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"><i class="ti ti-link me-2"></i> Feature 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><i class="ti ti-link me-2"></i>Feature 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><i class="ti ti-link me-2"></i>Feature 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <pre class="m-0" [innerHTML]="code | safe: 'html'"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold display-3 text-center mt-3">Features</h2>
+    <p class="fs-3 text-center text-body-secondary">The platform tailored for the serverless revolution</p>
+  </div>
+
+  <div class="row flex-wrap">
+    @for (feature of features; track feature; let i = $index) {
+      <div class="mb-4" [class]="feature.col">
+        <div class="card overflow-hidden h-100 d-flex flex-column justify-content-between ele">
+          <img class="w-100 object-fit-contain z-1" height="200" [src]="feature.img" alt="" />
+          <div class="feature-1"></div>
+          <div class="card-body d-flex align-items-center flex-column">
+            <h5 class="text-center fw-bold fs-4 text-body-emphasis" [innerHTML]="feature.title"></h5>
+            <p class="text-center fs-6 m-0" [innerHTML]="feature.description"></p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section> -->
+
+<section class="py-5 my-5 position-relative">
+  <div class="line"></div>
+  <div class="marquee overflow-hidden">
+    <div class="marquee-content">
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=01" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=02" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=03" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=04" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=05" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=06" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=07" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=08" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=01" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=02" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=03" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=04" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=05" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=06" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=07" alt="" />
+      </div>
+
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=08" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="overflow-hidden position-relative" style="margin-bottom: 10rem; padding: 5rem">
+  <div class="container position-relative">
+    <div class="console-bg"></div>
+    <div class="position-relative p-5 text-muted bg-body border border-dashed rounded-5 row mt-0 row-cols-1 row-cols-md-2 g-5 py-5">
+      <div class="col d-flex flex-column align-items-start gap-2 my-5">
+        <h2 class="fw-bold text-body-emphasis">Code the way you want</h2>
+        <p class="text-body-secondary">
+          We support many SDKs making Appwrite flexible to your needs and ensuring you can code with the language you want at any time.
+        </p>
+        <a [href]="urls.console" class="btn btn-primary btn-lg">View all SDKs</a>
+      </div>
+
+      <div class="col ps-5 my-5">
+        <div class="row row-cols-1 row-cols-sm-4 g-4 ps-5">
+          @for (codePlatform of codePlatforms; track codePlatform) {
+            <div class="col d-flex flex-column gap-2">
+              <!-- <div
             class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
             >
           </div> -->
-            <img [src]="codePlatform.img" [alt]="codePlatform.link" width="32px" height="32px" />
-          </div>
-        }
+              <img [src]="codePlatform.img" [alt]="codePlatform.link" width="32px" height="32px" />
+            </div>
+          }
+        </div>
       </div>
     </div>
   </div>

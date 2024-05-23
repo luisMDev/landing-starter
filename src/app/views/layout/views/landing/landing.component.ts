@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { environment } from '../../../../../../environments/environment';
+import { CommonModule } from '@angular/common';
+import { SafePipe } from '@luismdev/ngx-utils/pipes';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterModule],
+  imports: [ReactiveFormsModule, RouterModule, CommonModule, SafePipe],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
 })
@@ -19,8 +21,11 @@ export class LandingComponent {
     'https://novu.co/static/unity-a7890c15181b314e465a25dabf6e9c6f.svg',
     'https://novu.co/static/capgemini-e6fc9159b556987df65a0bde63d4a387.svg',
     'https://novu.co/static/siemens-8c3151faa401d398dfcee376ff0dc953.svg',
-    'https://novu.co/static/hemnet-69bd8f63b6d17db3dfff5dd6c59825dd.svg',
+    'https://novu.co/static/siemens-8c3151faa401d398dfcee376ff0dc953.svg',
+    'https://novu.co/static/capgemini-e6fc9159b556987df65a0bde63d4a387.svg',
+    'https://novu.co/static/mongo-db-b0ca427d409133f6e3f010544e44ddf6.svg',
     'https://novu.co/static/unity-a7890c15181b314e465a25dabf6e9c6f.svg',
+    'https://novu.co/static/hemnet-69bd8f63b6d17db3dfff5dd6c59825dd.svg',
   ];
 
   public howItWorks = [
@@ -43,62 +48,90 @@ export class LandingComponent {
 
   public demos = [
     {
-      img: 'https://landing-open-rewards.web.app/assets/achievements.png',
-      title: 'Configure any shape of achievements, challenges or milestones',
-      description: `Use Open Loyalty's gamification software to create achievements that drive your business goals, such as purchase frequency or increasing customer lifetime value.
-      <br><br>Set challenges with goals based on transactional data, customer behavior or activity streaks. Create simple milestones or multi-dimensional achievements composed of several rules. `,
+      img: 'https://via.placeholder.com/600x200',
+      title: 'Feature 1',
+      description: `Feature 1 description `,
     },
     {
-      img: 'https://landing-open-rewards.web.app/assets/coins.png',
-      title: 'Use achievements to trigger campaigns and reward customers for completing them',
-      description: `Allow customers to participate in achievement-based campaigns, which give users additional benefits such as points, rewards, coupons, or badges. Configure campaigns that reward customers both for completing milestones and for fulfilling the whole challenge.
-      <br><br>See examples of achievement-based campaigns created by our loyalty experts.`,
+      img: 'https://via.placeholder.com/600x200',
+      title: 'API First',
+      description: `Feature 2 description `,
     },
     {
-      img: 'https://landing-open-rewards.web.app/assets/charts.png',
-      title: 'Track progress and results driven by achievements',
-      description: `Monitor which achievement-based campaigns are the most popular or engaging. Check customer progress in fulfilling assigned challenges. Apply insights to improve your loyalty marketing and deliver more business results.
-      `,
+      img: 'https://via.placeholder.com/600x200',
+      title: 'Feature 3',
+      description: `Feature 3 description `,
+    },
+    {
+      img: 'https://via.placeholder.com/600x200',
+      title: 'Feature 4',
+      description: `Feature 4 description `,
+    },
+    {
+      img: 'https://via.placeholder.com/600x200',
+      title: 'Feature 5',
+      description: `Feature 5 description `,
+    },
+    {
+      img: 'https://via.placeholder.com/600x200',
+      title: 'Feature 6',
+      description: `Feature 6 description `,
     },
   ];
 
   public features = [
     {
-      img: 'https://landing-open-rewards.web.app/assets/features/tiers.webp',
-      title: 'Tiers',
-      description: `Assign specific benefits to each tier, such as permanent discounts and special point multipliers.`,
+      img: 'https://landing-open-rewards.web.app/assets/features/achievements.webp',
+      title: 'Achievements',
+      description: `Set challenges with goals based on transactional data, customer behavior or activity streaks. Create simple milestones or multi-dimensional achievements composed of several rules. `,
+      col: 'col-6',
+      soon: false,
     },
     {
       img: 'https://landing-open-rewards.web.app/assets/features/points.webp',
       title: 'Points',
       description: `Configure custom events and give different amount of points for activities unique to your business.`,
+      col: 'col-3',
+      soon: false,
     },
     {
-      img: 'https://landing-open-rewards.web.app/assets/features/achievements.webp',
-      title: 'Achievements',
-      description: `Set challenges with goals based on transactional data, customer behavior or activity streaks. Create simple milestones or multi-dimensional achievements composed of several rules. `,
+      img: 'https://landing-open-rewards.web.app/assets/features/tiers.webp',
+      title: 'Tiers',
+      description: `Assign specific benefits to each tier, such as permanent discounts and special point multipliers.`,
+      col: 'col-3',
+      soon: false,
     },
     {
       img: 'https://landing-open-rewards.web.app/assets/features/battle-pass.webp',
-      title: 'Battle pass <small>coming soon</small>',
+      title: 'Battle pass',
       description: `Set challenges with goals based on transactional data, customer behavior or activity streaks. Create simple milestones or multi-dimensional achievements composed of several rules. `,
+      col: 'col-3',
+      soon: true,
     },
     {
       img: 'https://landing-open-rewards.web.app/assets/features/coupons.webp',
-      title: 'Coupons <small>coming soon</small>',
+      title: 'Coupons',
       description: `Choose between a selection of coupon redemption rules or allow users to redeem coupons from the rewards catalog or in-store.`,
+      col: 'col-3',
+      soon: true,
     },
     {
       img: 'https://landing-open-rewards.web.app/assets/features/referrals.webp',
-      title: 'Referrals <small>coming soon</small>',
+      title: 'Referrals',
       description: `Referrals are a powerful promotional tactic, helping businesses acquire customers more easily and cost-effectively.`,
+      col: 'col-3',
+      soon: true,
     },
     {
       img: 'https://landing-open-rewards.web.app/assets/features/notifications.webp',
       title: 'Webhooks',
       description: `The new webhook mechanism is based on subscriptions to individual events occurring in the system. `,
+      col: 'col-6',
+      soon: false,
     },
   ];
+
+  public activeFeature = 0;
 
   public codePlatforms = [
     {
@@ -157,4 +190,20 @@ export class LandingComponent {
       link: '/docs/quick-starts/react-native',
     },
   ];
+
+  public code: string = `
+ 
+  <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">import</span></span></span> { createClient } <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">from</span></span></span> <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"@libsql/client"</span></span></span>;
+              
+  <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">const</span></span></span> client = createClient({
+    <span class="hljs-attr"><span class="hljs-attr"><span class="hljs-attr">url</span></span></span>: <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"file:replica.db"</span></span></span>,
+    <span class="hljs-attr"><span class="hljs-attr"><span class="hljs-attr">syncUrl</span></span></span>: <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"libsql://..."</span></span></span>,
+    <span class="hljs-attr"><span class="hljs-attr"><span class="hljs-attr">authToken</span></span></span>: <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"..."</span></span></span>,
+  });
+  
+  <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">const</span></span></span> result = <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">await</span></span></span> client.execute({
+    <span class="hljs-attr"><span class="hljs-attr"><span class="hljs-attr">sql</span></span></span>: <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"SELECT * FROM users WHERE id = ?"</span></span></span>,
+    <span class="hljs-attr"><span class="hljs-attr"><span class="hljs-attr">args</span></span></span>: [<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">1</span></span></span>],
+  });
+  `;
 }

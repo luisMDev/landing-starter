@@ -1,8 +1,203 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
 :host {
+  display: block;
+  overflow-x: hidden;
+  // overflow: hidden;
+  // background-image: url(https://uploads-ssl.webflow.com/6408bea3de5aef58b7e197d4/6438c3059d443cd7a78762eb_stars-bg.png);
+  // background-position: 50%;
+  // background-size: 1090px;
+
   .icon-square {
     width: 70px;
     height: 70px;
     margin-top: -4rem;
     margin-bottom: 1rem;
+  }
+  h1 {
+    background: linear-gradient(to right, var(--bs-primary) 20%, $pink-500 80%);
+    background-clip: text;
+    // font-size: 72px;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .main-bg {
+    background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/04/furiosa-saga-mad-max-3303782.jpg?tf=3840x');
+    width: 1000px;
+    height: 500px;
+    background-size: cover;
+    position: relative;
+    border-radius: 4px;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      background: inherit;
+      filter: blur(55px) contrast(200%);
+      z-index: -1;
+      opacity: 0.5;
+    }
+  }
+  img {
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      background: inherit;
+      filter: blur(55px) contrast(200%);
+      z-index: -1;
+      opacity: 0.5;
+    }
+  }
+
+  .feature-1 {
+    filter: blur(70px);
+    opacity: 0.4;
+    position: absolute;
+    width: 1000px;
+    height: 700px;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: conic-gradient(from 0deg at 50% 50%, var(--bs-primary) 0deg, #d63384 54deg, var(--bs-primary) 106deg, #d63384 360deg);
+      border-radius: 50%;
+      opacity: 0.6;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  .console-bg {
+    z-index: -1;
+    top: -25%;
+    left: -10%;
+    mask-image: radial-gradient(ellipse, black 20%, transparent 90%);
+    position: absolute;
+    width: 120%;
+    height: 150%;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .line {
+    background: linear-gradient(to right, var(--bs-primary), $pink-500);
+    height: 55px;
+    width: 150%;
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    transform: rotate(-10deg);
+    filter: blur(30px);
+  }
+  .marquee {
+    position: relative;
+
+    .marquee-content {
+      display: flex;
+      animation: scrolling 30s linear infinite;
+      gap: 0.5rem;
+      .marquee-item {
+        flex: 0 0 16vw;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translatex(-144vw);
+    }
+  }
+  .feature-group {
+    padding: 5rem 0;
+    border-width: 0.1rem;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bs-secondary-bg) 20%, var(--bs-secondary-bg) 80%, rgba(0, 0, 0, 0))
+      1 100%;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    .feature {
+      cursor: pointer;
+      border-left: 0.3rem solid transparent;
+      margin-left: -0.2rem;
+      &.active {
+        border-left: 0.3rem solid var(--bs-primary);
+        border-image: linear-gradient(to bottom, var(--bs-primary), $pink-500) 1;
+      }
+    }
+  }
+  .feature-img {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      background: inherit;
+      filter: blur(20px) contrast(200%);
+      z-index: -1;
+      opacity: 0.5;
+    }
+  }
+
+  .feature-bg {
+    z-index: -1;
+    top: 0%;
+    left: 0%;
+    mask-image: radial-gradient(ellipse, black 20%, transparent 90%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
+  }
+  ::ng-deep pre {
+    .hljs-keyword {
+      color: $indigo-300;
+    }
+    .hljs-string {
+      color: $green-300;
+    }
+    .hljs-attr {
+      color: $orange-300;
+    }
+    .hljs-number {
+      color: $yellow-300;
+    }
+  }
+}
+
+::ng-deep body {
+  &[data-bs-theme='light'] .brand {
+    filter: brightness(0);
   }
 }

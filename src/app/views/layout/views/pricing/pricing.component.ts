@@ -20,6 +20,7 @@ export class PricingComponent {
       sub: 'per member/month',
       description: 'For testing and evaluation or small-scale deployments.      ',
       features: ['Up to 1000 users', 'Up to 1000 events', 'Email support'],
+      featured: false,
     },
     {
       name: 'Pro',
@@ -27,6 +28,7 @@ export class PricingComponent {
       sub: 'per member/month',
       description: 'Good place for bigger projects, startups, and businesses.      ',
       features: ['Up to 10000 users', 'Up to 10000 events', 'Priority support'],
+      featured: true,
     },
     {
       name: 'Enterprise',
@@ -34,6 +36,7 @@ export class PricingComponent {
       sub: 'per organization/month',
       description: 'For businesses that need Premium Enterprise Support, custom SLAs, and/or very large deployments.',
       features: ['Unlimited users', 'Unlimited events', 'Phone support'],
+      featured: false,
     },
   ];
 

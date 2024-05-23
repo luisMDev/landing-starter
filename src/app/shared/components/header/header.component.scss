@@ -1,3 +1,6 @@
 :host {
-  padding: 0;
+  header {
+    backdrop-filter: blur(20px);
+    background-color: rgba(var(--bs-body-bg-rgb), 0.6);
+  }
 }
