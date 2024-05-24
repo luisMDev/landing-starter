@@ -1,0 +1,106 @@
+import { Feature } from '../interfaces/feature.interface';
+
+export const FeaturesModel: Record<string, Feature[]> = {
+  en: [
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 1',
+      description: `Feature 1 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 2',
+      description: `Feature 2 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 3',
+      description: `Feature 3 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 4',
+      description: `Feature 4 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 5',
+      description: `Feature 5 description `,
+      col: 'col-6',
+      soon: true,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 6',
+      description: `Feature 6 description `,
+      col: 'col-6',
+      soon: true,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 7',
+      description: `Feature 7 description `,
+      col: 'col-6',
+      soon: true,
+    },
+  ],
+  es: [
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 1',
+      description: `Feature 1 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 2',
+      description: `Feature 2 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 3',
+      description: `Feature 3 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 4',
+      description: `Feature 4 description `,
+      col: 'col-6',
+      soon: false,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 5',
+      description: `Feature 5 description `,
+      col: 'col-6',
+      soon: true,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 6',
+      description: `Feature 6 description `,
+      col: 'col-6',
+      soon: true,
+    },
+    {
+      img: 'https://via.placeholder.com/200x200',
+      title: 'Feature 7',
+      description: `Feature 7 description `,
+      col: 'col-6',
+      soon: true,
+    },
+  ],
+};

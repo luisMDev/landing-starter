@@ -1,88 +1,54 @@
 {
-  "USERS": {
-    "TITLE": "Users",
-    "TOTAL": "Total users",
-    "SEARCH_PLACEHOLDER": "Search users",
-    "CREATE_BUTTON": "Create user",
-    "NAME_COLUMN": "Name",
-    "EMAIL_COLUMN": "Email"
+  "LANDING": {
+    "TITLE": "Landing title",
+    "SUBTITLE": "Subtitle",
+    "BUTTON_1": "Primary button",
+    "BUTTON_2": "Secondary button",
+    "MAIN_BG": "https://via.placeholder.com/1000x500",
+    "TRUSTED_BY": "Trusted by engineers at",
+    "FEATURES_TITLE": "Features",
+    "FEATURES_SUBTITLE": "Features subtitle",
+    "FEATURES_SOON": "soon",
+    "FEATURES_TITLE_2": "Features title 2",
+    "FEATURES_SUBTITLE_2": "Features subtitle 2",
+    "GET_STARTED": "Get started",
+    "THE_CODE": "The Code!",
+    "THE_CODE_DESCRIPTION": "The code description",
+    "THE_CODE_QUOTE": "The code quote",
+    "THE_CODE_QUOTE_2": "The code quote 2",
+    "THE_CODE_TAB_1": "Feature 1",
+    "THE_CODE_TAB_2": "Feature 2",
+    "THE_CODE_TAB_3": "Feature 3",
+    "CODE_THE_WAY_YOU_WANT": "Code the way you want",
+    "CODE_THE_WAY_YOU_WANT_DESCRIPTION": "Code the way you want description",
+    "VIEW_ALL_SDKS": "View all SDKs"
   },
-  "USER_PROFILE": {
-    "BACK": "Back",
-    "TITLE": "User profile",
-    "NAME": "Name",
-    "EMAIL": "Email",
-    "ROLE": "Role",
-    "SAVE_BUTTON": "Save",
-    "CANCEL_BUTTON": "Cancel",
-    "DELETE_TITLE": "Delete user",
-    "DELETE_DESCRIPTION": "This action is irreversible. ",
-    "DELETE_BUTTON": "Delete",
-    "MODAL_DELETE_BUTTON": "Delete",
-    "MODAL_CANCEL": "Cancel",
-    "MODAL_TITLE": "Reminder",
-    "MODAL_DESCRIPTION": "This action cannot be undone. It will permanently delete the user.",
-    "PASSWORD_TITLE": "Change password",
-    "PASSWORD_DESCRIPTION": "Enter the new password for the user. ",
-    "PASSWORD_LABEL": "Password",
-    "PASSWORD_PLACEHOLDER": "Enter the new password for the user. ",
-    "REPEAT_PASSWORD_LABEL": "Repeat password",
-    "REPEAT_PASSWORD_PLACEHOLDER": "Repeat the new password for the user.",
-    "PASSWORD_BUTTON": "Change password",
-    "INFO_TITLE": "User information",
-    "INFO_DESCRIPTION": "Here you can see the user information. ",
-    "AVATAR_LABEL": "Avatar",
-    "EMAIL_LABEL": "Email",
-    "EMAIL_PLACEHOLDER": "Enter the email for the user. ",
-    "NAME_LABEL": "Name",
-    "NAME_PLACEHOLDER": "Enter the name for the user. ",
-    "METADATA": "Metadata"
-  },
-  "CREATE_USER": {
-    "TITLE": "Create user",
-    "NAME_LABEL": "Name",
-    "NAME_PLACEHOLDER": "Enter the name for the user. ",
-    "EMAIL_LABEL": "Email",
-    "EMAIL_PLACEHOLDER": "Enter the email for the user. ",
-    "METADATA_LABEL": "Metadata",
-    "CANCEL": "Cancel",
-    "SUBMIT": "Create user"
+  "PRICING": {
+    "HEADER": "Predictable pricing, designed to scale",
+    "DESCRIPTION": "Quickly build an effective pricing table for your potential customers",
+    "BUTTON": "Sign up for free",
+    "COMPARE": "Compare plans",
+    "PLANS": {
+      "STARTER": "Starter",
+      "PRO": "Pro",
+      "ENTERPRISE": "Enterprise"
+    }
   },
   "HEADER": {
-    "DOCUMENTATION": "Documentation"
+    "LOGO": "https://via.placeholder.com/200x37",
+    "PRICING": "Pricing",
+    "DOCUMENTATION": "Documentation",
+    "STAR_ON_GITHUB": "Star on Github",
+    "GO_TO_CONSOLE": "Go to console"
   },
   "FOOTER": {
+    "LOGO": "https://via.placeholder.com/34x34",
     "ALL_RIGHTS_RESERVED": "ⓒ {{year}} {{name}} all rights reserved",
     "VERSION": "Version {{version}}",
     "DOCUMENTATION": "Documentation"
   },
-  "MY_PROFILE": {
-    "TITLE": "My profile"
-  },
-  "CUSTOMIZATION": {
-    "TITLE": "Customization",
-    "INFO_TITLE": "Customization",
-    "INFO_DESCRIPTION": "Here you can customize the appearance of the application. ",
-    "PROJECT_NAME_LABEL": "Project name",
-    "PROJECT_NAME_PLACEHOLDER": "Enter the name of the project. ",
-    "APPEARANCE_TITLE": "Appearance",
-    "APPEARANCE_DESCRIPTION": "Here you can customize the appearance of the application. ",
-    "LOGO_LABEL": "Logo",
-    "COLOR_PRIMARY_LABEL": "Primary color",
-    "COLOR_PRIMARY_PLACEHOLDER": "Select the primary color of the application. ",
-    "COLOR_SECONDARY_LABEL": "Secondary color",
-    "COLOR_SECONDARY_PLACEHOLDER": "Select the secondary color of the application. ",
-    "COLOR_ACCENT_LABEL": "Accent color",
-    "COLOR_ACCENT_PLACEHOLDER": "Select the accent color of the application. ",
-    "BACKGROUND_LABEL": "Background",
-    "LINKS_TITLE": "Links",
-    "LINKS_DESCRIPTION": "Here you can customize the links of the application. ",
-    "DOCS_LINKS_LABEL": "Documentation links",
-    "DOCS_LINKS_PLACEHOLDER": "Enter the documentation links. ",
-    "GITHUB_LINKS_LABEL": "Github links",
-    "GITHUB_LINKS_PLACEHOLDER": "Enter the github links. "
-  },
-  "WEBHOOKS": {
-    "TITLE": "Webhooks"
+  "COMMON": {
+    "LINK_GITHUB": "https://github.com/luismdev/landing-starter",
+    "LINK_DOCS": "https://github.com/luismdev/landing-starter"
   }
 }

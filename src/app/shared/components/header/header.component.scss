@@ -2,5 +2,13 @@
   header {
     backdrop-filter: blur(20px);
     background-color: rgba(var(--bs-body-bg-rgb), 0.6);
+    .logo {
+      height: 37px;
+    }
+    .nav-link {
+      &.active {
+        color: var(--bs-primary) !important;
+      }
+    }
   }
 }

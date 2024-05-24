@@ -7,6 +7,5 @@ export const environment = {
   urls: {
     console: 'http://localhost:4200',
     docs: 'http://localhost:4300',
-    github: '',
   },
 };

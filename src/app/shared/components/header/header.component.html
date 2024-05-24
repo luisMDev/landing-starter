@@ -1,26 +1,31 @@
 <header class="d-flex flex-wrap justify-content-between p-3 border-bottom sticky-top">
   <div class="container d-flex flex-wrap justify-content-between">
     <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-      <b class="fs-4">Landing starter</b>
+      <img class="logo img-fluid" [src]="'HEADER.LOGO' | translate" alt="" />
     </a>
-    <ul class="nav nav-pills">
+
+    <ul class="nav gap-3 justify-content-end">
       <li class="nav-item">
-        <a href="/pricing" class="nav-link link-body-emphasis text-muted fw-semibold"> {{ 'HEADER.PRICING' | translate }} </a>
+        <a href="/pricing" routerLinkActive="active" class="nav-link link-body-emphasis text-muted fw-semibold">
+          {{ 'HEADER.PRICING' | translate }}
+        </a>
       </li>
 
-      <li class="nav-item">
-        <a [href]="urls.docs" class="nav-link link-body-emphasis text-muted fw-semibold"> {{ 'HEADER.DOCUMENTATION' | translate }} </a>
+      <li class="nav-item me-2">
+        <a [href]="urls.docs" routerLinkActive="active" class="nav-link link-body-emphasis text-muted fw-semibold">
+          {{ 'HEADER.DOCUMENTATION' | translate }}
+        </a>
       </li>
-    </ul>
-    <ul class="nav nav-pills gap-3">
       <li class="nav-item">
-        <div class="btn btn-outline-primary">
+        <a class="btn btn-outline-primary" [href]="'COMMON.LINK_GITHUB' | translate">
           <i class="ti ti-brand-github"></i>
-          Star on Github
-        </div>
+          {{ 'HEADER.STAR_ON_GITHUB' | translate }}
+        </a>
       </li>
       <li class="nav-item">
-        <div class="btn btn-primary">Go to console</div>
+        <a class="btn btn-primary" [href]="'COMMON.LINK_DOCS' | translate">
+          {{ 'HEADER.GO_TO_CONSOLE' | translate }}
+        </a>
       </li>
     </ul>
   </div>

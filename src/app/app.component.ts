@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'landing-starter-root',
@@ -8,4 +9,10 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  #translateService: TranslateService = inject(TranslateService);
+
+  public ngOnInit(): void {
+    this.#translateService.currentLang = 'en';
+  }
+}

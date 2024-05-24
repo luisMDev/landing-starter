@@ -31,6 +31,21 @@ Clone and run the Docker container for [Arcane auth](https://github.com/arcane-a
    ```
    Open http://localhost:4100 to view it in the browser.
 
+## Customization
+
+- To change the texts, you can change the texts in the `src/assets/i18n/` folder.
+- To change the logo, you can change the logo in the `src/assets/images/` folder.
+- To change the colors, you can change the colors in the `src/app/shared/styles/colors.scss` file.
+- To change the features, you can change the features in the `src/app/shared/models` folder.
+- To force the theme, you can change the bootstrap theme attribute in the `<html>` tag like this:
+
+```html
+<html data-bs-theme="dark">
+  or
+  <html data-bs-theme="light"></html>
+</html>
+```
+
 ## 🤝 Support
 
 If you encounter any issues or have questions, please file an issue on the GitHub repository.

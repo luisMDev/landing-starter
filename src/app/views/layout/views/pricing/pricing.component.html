@@ -1,10 +1,7 @@
 <main class="container mb-5 p-5">
   <section class="pricing-header p-3 pb-md-4 mx-auto text-center my-5">
-    <h1 class="display-7 fw-bold text-body-emphasis mb-3">Predictable pricing, designed to scale</h1>
-    <p class="fs-6 text-body-secondary">
-      Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap
-      components and utilities with little customization.
-    </p>
+    <h1 class="display-7 fw-bold text-body-emphasis mb-3" [innerHTML]="'PRICING.HEADER' | translate"></h1>
+    <p class="fs-6 text-body-secondary" [innerHTML]="'PRICING.DESCRIPTION' | translate"></p>
   </section>
 
   <section class="row mb-5">
@@ -15,15 +12,15 @@
             <h4 class="my-0 fw-normal text-uppercase fw-semibold">
               {{ plan.name }}
             </h4>
-            <p class="mt-2 fs-7 lh-sm text-body-secondary">{{ plan.description }}</p>
-            <button type="button" class="w-100 mt-3 btn btn-primary">Sign up for free</button>
+            <p class="mt-2 lh-sm text-body-secondary">{{ plan.description }}</p>
+            <button type="button" class="w-100 mt-3 btn btn-primary" [innerHTML]="'PRICING.BUTTON' | translate"></button>
           </div>
           <div class="card-body">
-            <small class="text-body-secondary text-body-tertiary fs-7"> From </small>
+            <small class="text-body-secondary text-body-tertiary"> From </small>
             <h1 class="card-title pricing-card-title d-flex flex-column m-0">
               <b>{{ plan.price }}</b>
             </h1>
-            <small class="text-body-tertiary fs-7"> {{ plan.sub }} </small>
+            <small class="text-body-tertiary"> {{ plan.sub }} </small>
             <ul class="list-unstyled my-4">
               @for (feature of plan.features; track feature) {
                 <li class="d-flex align-items-center mb-2">
@@ -38,7 +35,7 @@
     </div>
   </section>
 
-  <h2 class="display-6 text-center mt-3 mb-5 pt-5">Compare plans</h2>
+  <h2 class="display-6 text-center mt-3 mb-5 pt-5" [innerHTML]="'PRICING.COMPARE' | translate"></h2>
 
   <section class="table-responsive">
     @for (plan of comparePlans; track plan) {
@@ -46,18 +43,18 @@
         <thead>
           <tr>
             <th style="width: 34%" class="text-start">{{ plan.section }}</th>
-            <th style="width: 22%">Free</th>
-            <th style="width: 22%">Pro</th>
-            <th style="width: 22%">Enterprise</th>
+            <th style="width: 22%" [innerHTML]="'PRICING.PLANS.STARTER' | translate"></th>
+            <th style="width: 22%" [innerHTML]="'PRICING.PLANS.PRO' | translate"></th>
+            <th style="width: 22%" [innerHTML]="'PRICING.PLANS.ENTERPRISE' | translate"></th>
           </tr>
         </thead>
         <tbody>
           @for (list of plan.list; track list) {
             <tr>
               <th scope="row" class="text-start">{{ list.label }}</th>
-              <td [innerHTML]="list.starter"></td>
-              <td [innerHTML]="list.pro"></td>
-              <td [innerHTML]="list.enterprise"></td>
+              <td [innerHTML]="list.starter | translate"></td>
+              <td [innerHTML]="list.pro | translate"></td>
+              <td [innerHTML]="list.enterprise | translate"></td>
             </tr>
           }
         </tbody>

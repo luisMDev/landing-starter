@@ -1,52 +1,7 @@
 <div class="container my-4">
-  <footer class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">
-      <div class="col mb-3">
-        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-          <img class="bi me-2" src="https://uploads-ssl.webflow.com/6408bea3de5aef58b7e197d4/6408c50680c7dae0a89901a1_logo.svg" alt="" />
-        </a>
-        <p class="text-body-secondary">ⓒ 2024 Landing Starter all rights reserved</p>
-      </div>
-
-      <div class="col mb-3"></div>
-
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-
-      <div class="col mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
   <footer class="d-flex flex-wrap justify-content-between align-items-center">
     <section class="col d-flex align-items-center my-1">
+      <img class="logo img-fluid me-3" [src]="'FOOTER.LOGO' | translate" alt="" />
       <span class="fs-7 text-muted me-4">{{ 'FOOTER.ALL_RIGHTS_RESERVED' | translate: { name: 'Landing Starter', year: year } }} </span>
     </section>
     <section class="nav col justify-content-end d-flex my-1">
@@ -56,11 +11,13 @@
       <span class="fs-7 text-muted mx-4"> {{ 'FOOTER.VERSION' | translate: { version: version } }} </span>
       <ng-container>
         <div class="vr"></div>
-        <a class="fs-7 text-muted mx-4 link-underline-light" href="config?.LINK_DOCS"> {{ 'FOOTER.DOCUMENTATION' | translate }} </a>
+        <a class="fs-7 text-muted mx-4 link-underline-light" [href]="'COMMON.LINK_DOCS' | translate">
+          {{ 'FOOTER.DOCUMENTATION' | translate }}
+        </a>
       </ng-container>
       <ng-container>
         <div class="vr"></div>
-        <a class="fs-7 text-muted mx-4 link-underline-light" href="config?.LINK_GITHUB">
+        <a class="fs-7 text-muted mx-4 link-underline-light" [href]="'COMMON.LINK_GITHUB' | translate">
           <i class="ti ti-brand-github"></i>
         </a>
       </ng-container>
