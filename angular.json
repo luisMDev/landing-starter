@@ -33,13 +33,18 @@
                 "output": "/assets/auth"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles.scss",
+              "src/app/shared/styles/colors.scss",
+              "node_modules/@tabler/icons-webfont/dist/tabler-icons.min.css",
+              "node_modules/@luismdev/ngx-error-handler/src/lib/styles/ngx-error-handler.scss"
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/shared/styles"]
             },
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": false,
             "ssr": {
               "entry": "server.ts"
             }
@@ -54,8 +59,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all",

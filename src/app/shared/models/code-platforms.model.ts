@@ -1,57 +1,62 @@
 export const CodePlatformsModel = [
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/flutter.png',
     title: 'Flutter',
     link: '/docs/quick-starts/flutter',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/nestjs.png',
+    title: 'nestjs',
+    link: '/docs/quick-starts/nestjs',
+  },
+  {
+    img: '/assets/images/platforms/nextjs.png',
     title: 'nextjs',
     link: '/docs/quick-starts/nextjs',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/react.png',
     title: 'react',
     link: '/docs/quick-starts/react',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/svelte.png',
     title: 'svelte',
     link: '/docs/quick-starts/svelte',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/nuxt.png',
     title: 'nuxt',
     link: '/docs/quick-starts/nuxt',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/vue.png',
     title: 'vue',
     link: '/docs/quick-starts/vue',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/angular.png',
     title: 'angular',
     link: '/docs/quick-starts/angular',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/apple.png',
     title: 'apple',
     link: '/docs/quick-starts/apple',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/android.png',
     title: 'android',
     link: '/docs/quick-starts/android',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
+    img: '/assets/images/platforms/react.png',
     title: 'react',
     link: '/docs/quick-starts/react',
   },
   {
-    img: 'https://via.placeholder.com/46x46',
-    title: 'react-native',
-    link: '/docs/quick-starts/react-native',
+    img: '/assets/images/platforms/nodejs.png',
+    title: 'nodejs',
+    link: '/docs/quick-starts/nodejs',
   },
 ];

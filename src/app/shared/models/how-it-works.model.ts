@@ -3,66 +3,20 @@ import { HowItWorks } from '../interfaces/how-it-works.interface';
 export const HowItWorksModel: Record<string, HowItWorks[]> = {
   en: [
     {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 1',
-      description: `Feature 1 description `,
+      img: '/assets/images/feature-1.png',
+      title: 'Lorem ipsum dolor sit',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     },
     {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'API First',
-      description: `Feature 2 description `,
+      img: '/assets/images/feature-2.png',
+      title: 'Lorem ipsum',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
     {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 3',
-      description: `Feature 3 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 4',
-      description: `Feature 4 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 5',
-      description: `Feature 5 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 6',
-      description: `Feature 6 description `,
+      img: '/assets/images/feature-3.png',
+      title: 'Lorem ipsum',
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     },
   ],
-  es: [
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 1',
-      description: `Feature 1 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 2',
-      description: `Feature 2 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 3',
-      description: `Feature 3 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 4',
-      description: `Feature 4 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 5',
-      description: `Feature 5 description `,
-    },
-    {
-      img: 'https://via.placeholder.com/600x200',
-      title: 'Feature 6',
-      description: `Feature 6 description `,
-    },
-  ],
+  es: [],
 };

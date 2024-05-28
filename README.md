@@ -4,6 +4,8 @@ Welcome to the Angular Landing Starter Project! This project serves as a templat
 
 ## 📋 Features
 
+demo: [https://landing-starter.pages.dev/landing](https://landing-starter.pages.dev/landing)
+
 - Pre-configured Angular environment with essential modules.
 - Integrated user authentication using [Arcane auth](https://github.com/arcane-auth/arcane-auth).
 - Basic user management functionalities (create, update, delete).
@@ -29,7 +31,7 @@ Clone and run the Docker container for [Arcane auth](https://github.com/arcane-a
    ```bash
    npm run start:dev
    ```
-   Open http://localhost:4100 to view it in the browser.
+   Open http://localhost:4000 to view it in the browser.
 
 ## Customization
 

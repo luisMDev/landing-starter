@@ -1,6 +1,6 @@
 {
-  "name": "@arcane-auth/console",
-  "version": "0.0.1",
+  "name": "@luismdev/landing-starter",
+  "version": "1.0.0",
   "scripts": {
     "init": "npm install",
     "ng": "ng",
@@ -27,8 +27,9 @@
     "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@angular/ssr": "^17.3.7",
-    "@luismdev/ngx-error-handler": "^0.0.22",
-    "@luismdev/ngx-utils": "^0.1.12",
+    "@lottiefiles/dotlottie-web": "^0.22.0",
+    "@luismdev/ngx-error-handler": "^0.0.26",
+    "@luismdev/ngx-utils": "^0.1.16",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
